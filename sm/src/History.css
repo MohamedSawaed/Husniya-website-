@@ -1,0 +1,134 @@
+/* Keyframe animations for slide-in effect */
+@keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px); /* Start from the left */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Slide into position */
+    }
+  }
+  
+  /* Container with responsive layout and slide-in animation */
+  .history-container {
+    padding: 20px; /* Padding for space */
+    min-height: 100vh; /* Full screen height */
+    background: linear-gradient(180deg, #e0f7fa, #80deea); /* Gradient background */
+    text-align: right; /* Right-to-left alignment */
+    animation: slide-in 1s ease-in-out; /* Slide in on page load */
+  }
+  
+  /* Page title with underline animation */
+  .page-title {
+    font-size: 36px; /* Large font for impact */
+    font-weight: bold; /* Bold font */
+    color: #006064; /* Deep teal */
+    text-align: right; /* Right-to-left alignment */
+    position: relative; /* For pseudo-element animations */
+  }
+  
+  /* Underline animation on hover for the page title */
+  .page-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position for underline */
+    left: 0; /* Left-aligned underline */
+    width: 0; /* No underline initially */
+    height: 3px; /* Slightly thicker underline */
+    background: #006064; /* Same color as title */
+    transition: width 0.5s ease; /* Smooth transition */
+  }
+  
+  .page-title:hover::after {
+    width: 100%; /* Expand underline on hover */
+  }
+  
+  /* Styling for each history section */
+  .history-section {
+    padding: 20px; /* Padding for space */
+    margin-bottom: 20px; /* Space between sections */
+    background: white; /* White background */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Section heading with transitions */
+  .history-section h2 {
+    font-size: 24px; /* Large font size */
+    font-weight: bold; /* Bold font for emphasis */
+    color: #333333; /* Dark color for readability */
+    text-align: right; /* Right-to-left alignment */
+  }
+  
+  /* Section paragraph with softer text color */
+  .history-section p {
+    font-size: 18px; /* Standard font size */
+    color: #666666; /* Softer gray for readability */
+    line-height: 1.5; /* Increased line height for readability */
+    text-align: right; /* Right-to-left alignment */
+  }
+  
+  .history-image-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    animation: fadeInScale 1.5s ease-out forwards;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the images horizontally */
+  }
+  
+  .history-image {
+    width: calc(33.33% - 10px); /* Adjust spacing between images */
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center center;
+    margin-right: 10px; /* Adjust spacing between images */
+    margin-bottom: 10px; /* Adjust spacing between rows */
+  }
+  
+  
+  .history-image:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+    animation: rotateImage 10s infinite linear;
+  }
+  
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotateImage {
+    0% {
+      transform: scale(1.1) rotate(0deg);
+    }
+    100% {
+      transform: scale(1.1) rotate(360deg);
+    }
+  }
+  
+  /* Additional global animations for visual interest */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide-in {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  

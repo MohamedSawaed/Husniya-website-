@@ -1,0 +1,109 @@
+/* General styling for the local committee */
+.local-committee {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  padding: 20px; 
+  direction: rtl; 
+  background: linear-gradient(135deg, #e0f7fa, #ffffff); /* Subtle gradient background */
+  color: #333; /* Dark text for contrast */
+}
+
+/* Header with stylish transitions and hover effects */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px; 
+  border-bottom: 2px solid #26c6da; /* More vibrant border */
+  background: linear-gradient(90deg, #FFDEE9, #B5FFFC);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: all 0.3s ease; 
+}
+
+.header:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Title styling with a bold look */
+.title {
+  font-size: 2.5em; /* Larger font size for prominence */
+  font-weight: 700; 
+  color: #0077a3; /* Vibrant blue color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.title:hover {
+  color: #005f7a; /* Darker blue on hover */
+}
+
+/* Logo styling with interactive effects */
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(2px 2px 5px #333); /* Adds a shadow effect */
+  transition: transform 0.3s ease; 
+}
+
+.logo img:hover {
+  transform: scale(1.15); /* More noticeable scale effect */
+}
+
+/* Main council information section with smooth transitions */
+.council-info {
+  margin-top: 20px; 
+  display: flex;
+  flex-direction: column;
+  animation: slide-in 1.5s; /* Slide-in animation */
+  
+}
+
+/* Individual council members section with creative layout */
+.council-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* More space between members */
+  margin-top: 20px;
+  justify-content: space-evenly; /* Even spacing for better balance */
+}
+
+/* Member styling with more interactive effects */
+.member {
+  background: linear-gradient(135deg, #f9f9f9, #e0f7fa); /* Gradient background */
+  padding: 20px; /* Increased padding for comfort */
+  border-radius: 12px; /* Smoother corners */
+  flex-basis: 45%; 
+  text-align: right; 
+  transition: all 0.3s ease; 
+  border: 2px solid #26c6da; /* Highlighted border */
+}
+
+.member:hover {
+  transform: translateY(-8px); /* Higher lift on hover */
+  background: linear-gradient(90deg, #FFDEE9, #B5FFFC); /* More prominent shadow */
+  background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .member {
+    flex-basis: 100%; 
+    padding: 25px; /* Increased padding for smaller screens */
+  }
+}
+
+/* Keyframe animations */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

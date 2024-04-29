@@ -1,0 +1,171 @@
+/* Creative Navbar with Consistent Colors */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px; /* Generous padding for a substantial look */
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,68,121,0.7287289915966386) 35%, rgba(0,212,255,1) 100%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  flex-wrap: wrap; /* Flexibility for smaller screens */
+  transition: all 0.6s ease; /* Smooth transitions */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dynamic wave effect for the navbar */
+.navbar::before {
+  content: '';
+  position: absolute;
+  bottom: -15px; /* Positioned to create wave effect */
+  left: 0;
+  width: 100%;
+  height: 30px; /* Taller wave effect */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent); /* Subtle white gradient */
+  border-radius: 50%; /* Create the wave shape */
+  transition: transform 0.6s ease, opacity 0.5s ease;
+  transform: scale(0); /* Start scaled down for wave effect */
+}
+
+.navbar:hover::before {
+  transform: scale(1); /* Expand the wave on hover */
+}
+
+.navbar:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Enhanced contact-info with bold transitions */
+.contact-info {
+  display: flex;
+  gap: 25px; /* Wider spacing for cleaner layout */
+  flex-direction: row;
+  animation: fade-in 1.2s; /* Smooth fade-in animation */
+}
+
+.contact-item {
+  cursor: pointer;
+  transition: all 0.5s ease; /* Smooth transitions for hover effects */
+  color: #FFFFFF; /* Consistent white text */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.contact-item:hover {
+  color: #000000; /* Soft red on hover */
+  transform: scale(1.2); /* Larger scaling effect on hover */
+}
+
+/* Welcome message with advanced styling */
+.welcome-message {
+  color: #B5FFFC; /* Consistent white for uniformity */
+  text-align: center;
+  flex: 1;
+  font-size: 28px; /* Larger font size for emphasis */
+  transition: color 0.5s ease;
+  font-family: 'Montserrat', sans-serif; /* Consistent font choice */
+}
+
+.welcome-message:hover {
+  color: black; /* Soft blue on hover for contrast */
+}
+
+/* Enhanced white-section with transitions */
+.white-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,68,121,0.7287289915966386) 35%, rgba(0,212,255,1) 100%);
+  padding: 30px 40px; /* Consistent padding */
+  position: relative;
+  animation: slide-in 1.5s; /* Smooth slide-in animation */
+}
+
+.white-section:hover {
+  background-position: center; /* Keep the gradient centered on hover */
+}
+
+/* Advanced Logo Container with Creative Effects */
+.logo-container {
+  position: absolute;
+  right: 120px; /* Adjusted position for balance */
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.logo-container img {
+  width: 200px; /* Adjusted logo size */
+  height: auto; 
+  transition: transform 0.5s ease; /* Smooth transitions for hover effects */
+  filter: drop-shadow(6px 6px 15px rgba(0, 0, 0, 0.5)); /* Deeper drop-shadow for 3D effect */
+}
+
+.logo-container img:hover {
+  transform: rotate(10deg) scale(1.2); /* Larger scaling and rotation effect on hover */
+}
+
+/* Top-notch design for center-text with improved spacing and effects */
+.center-text {
+  font-size: 26px; /* Slightly larger font size for emphasis */
+  font-weight: bold; /* Bold font for a more striking appearance */
+  color: #333333; /* Neutral color for readability */
+  text-align: center; /* Center the text */
+  transition: all 0.5s ease; /* Smooth transitions for hover effects */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 15px 25px; /* Generous padding for space and comfort */
+  background: linear-gradient(90deg, #ffffff, #B5FFFC); /* Gentle gradient for visual appeal */
+  border-radius: 25px; /* Soft, rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin: 20px; /* Add space between elements */
+}
+
+.center-text:hover {
+  transform: scale(1.15); /* Enhanced scaling on hover */
+  background: linear-gradient(90deg, #B5FFFC, #FFDEE9); /* Reverse gradient on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+}
+
+/* Add interactive ripple effect */
+.center-text::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5); /* Light ripple effect */
+  border-radius: 50%; /* Round the ripple for a smooth look */
+  transition: transform 0.5s ease;
+  transform: scale(0); /* Start with a small ripple */
+  opacity: 0; /* Start with zero visibility */
+}
+
+.center-text:hover::before {
+  transform: scale(2); /* Expands on hover for a ripple effect */
+  opacity: 1; /* Make the ripple visible on hover */
+}
+
+/* Include space between text elements */
+.center-text + .center-text {
+  margin-top: 30px; /* Additional space between text elements */
+}
+
+/* Keyframe animations for dynamic effects */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

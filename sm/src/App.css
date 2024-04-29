@@ -1,0 +1,10 @@
+.home-background { 
+  background-image: url('./husniyya.jpg'); /* Background image */
+  background-size: cover; /* Fill the entire space */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
+  opacity: 0.6; 
+  position: relative; /* Relative positioning for context */
+  height: 100vh; /* Ensure full-screen coverage */
+  overflow: hidden; /* Prevent overflow issues */
+}

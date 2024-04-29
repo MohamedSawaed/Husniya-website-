@@ -1,0 +1,137 @@
+/* src/components/Cit.css */
+
+.cit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background: linear-gradient(90deg, #FFDEE9, #B5FFFC);
+    direction: rtl; /* Right-to-left text alignment for Hebrew */
+  padding: 20px;
+}
+
+.cit-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 2px solid #26c6da; /* Bold separator */
+  animation: fade-in 1s; /* Fade-in animation */
+}
+
+.husniya-logo {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(2px 2px 5px #aaa); /* Adds a shadow effect */
+}
+
+.cit-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px; /* More spacing for visual appeal */
+  padding: 20px;
+
+  border-radius: 10px; /* Smooth border radius */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  animation: slide-in 1.2s; /* Slide-in animation for content */
+}
+
+.cit-column {
+  flex: 1;
+  padding: 20px;
+  border-left: 2px solid #26c6da; /* Bolder separator */
+}
+
+.cit-column:first-child {
+  border-left: none; /* No border on the first column */
+}
+
+.cit-footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(to top, #ffffff, #e0f7fa); /* Inverted gradient */
+  animation: fade-in 1s; /* Fade-in animation for footer */
+  border-top: 2px solid #26c6da; /* Bold separator for footer */
+}
+
+/* Keyframes for pulsating effect on hover */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Slightly grow in size */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframes for slide-in animation when the button appears */
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); /* Slide in from the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Base styling for the request button with animations and gradients */
+.request-button {
+  padding: 15px 30px; /* Padding for comfort */
+  background: linear-gradient(to right, #26c6da, #00acc1); /* Gradient background */
+  color: white; /* White text for contrast */
+  border: none; /* No border for a clean look */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Larger font for readability */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.3s ease; /* Smooth transitions */
+  animation: slide-in 0.5s ease; /* Slide-in animation for when the button appears */
+}
+
+/* Hover effect with bounce animation and deeper shadow */
+.request-button:hover {
+  animation: pulsate 1s infinite; /* Pulsating effect on hover */
+  background: linear-gradient(to right, #00acc1, #26c6da); /* Invert gradient on hover */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Deep shadow on hover */
+}
+
+/* Focus effect with gradient outline */
+.request-button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0px 0px 0px 3px rgba(38, 198, 218, 0.5); /* Gradient outline for focus */
+}
+
+/* Active effect with darkened gradient and transform */
+.request-button:active {
+  background: linear-gradient(to right, #00838f, #00acc1); /* Darker gradient on click */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); /* Reduced shadow on click */
+  transform: scale(0.98); /* Slight shrink on click */
+}
+
+
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

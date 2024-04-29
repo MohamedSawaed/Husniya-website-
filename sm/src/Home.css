@@ -1,0 +1,210 @@
+/* Base styles for the home container */
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,68,121,0.7287289915966386) 35%, rgba(0,212,255,1) 100%);
+  color: #333; /* Basic text color for readability */
+}
+
+/* Background style for the inner section */
+.home-background {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0; /* Large padding for a more spacious feel */
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,68,121,0.7287289915966386) 35%, rgba(0,212,255,1) 100%);
+
+  transition: all 0.5s ease; /* Smooth transitions */
+}
+
+/* Keyframes for sliding up from the bottom */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); /* Start below the viewport */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Slide into position */
+  }
+}
+
+/* Card section with consistent size and slide-up animation */
+.card-section {
+  display: flex;
+  justify-content: space-evenly; /* Evenly space out the cards */
+  align-items: center;
+  gap: 30px; /* Space between cards */
+  padding: 40px; /* Extra padding for a cleaner layout */
+  animation: slide-up 1s ease-out; /* Slide-up animation on reload */
+}
+
+/* Uniform card base styling with fixed dimensions */
+.card {
+  width: 220px; /* Fixed width for uniformity */
+  height: 220px; /* Fixed height for consistent size */
+  background: white; /* Base card background */
+  border-radius: 15px; /* Rounded corners for a smooth look */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  text-align: center; /* Center-align the text */
+  text-decoration: none; /* No underline */
+  padding: 20px; /* Padding within the card */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transitions */
+  position: relative; /* Position for ripple effect */
+}
+
+/* Consistent hover effect with scaling and shadow */
+.card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Ripple effect for interactive hover animations */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); /* Center the ripple */
+  width: 10px; /* Ripple starts small */
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3); /* Subtle ripple effect */
+  border-radius: 50%; /* Rounded ripple */
+  transition: all 0.4s ease;
+  z-index: 0; /* Keep the ripple behind content */
+}
+
+/* Ripple expansion on hover */
+.card:hover::before {
+  width: 200%; /* Expand ripple */
+  height: 200%; /* Expand ripple on hover */
+}
+
+/* Consistent styling for icons in the card */
+.card-icon {
+  font-size: 48px; /* Larger icon for emphasis */
+  color: #FF5733; /* Vibrant color */
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+/* Styling for card titles */
+.card h2 {
+  font-size: 22px; /* Larger font size for titles */
+  font-weight: bold; /* Bold text for emphasis */
+  color: #333; /* Dark color for readability */
+}
+
+/* Styling for card paragraphs */
+.card p {
+  font-size: 16px; /* Standard font size */
+  color: #666; /* Softer gray for readability */
+}
+
+/* Additional hover animations for card icons */
+.card:hover .card-icon {
+  transform: rotate(10deg) scale(1.2); /* Rotation and scaling on hover */
+}
+
+/* Featured history card with distinct styling */
+.featured-history-card {
+  padding: 20px; /* Padding for space */
+  background: white; /* White background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: right; /* Right-to-left alignment */
+  margin-bottom: 30px; /* Space below the card */
+}
+
+/* Icon styling for the featured history card */
+.featured-history-icon {
+  font-size: 48px; /* Larger icon for emphasis */
+  color: #4527a0; /* Deep purple for consistency */
+  text-align: center; /* Center-align the icon */
+}
+
+/* Styling for the history card text */
+.featured-history-card h2 {
+  font-size: 24px; /* Larger font for titles */
+  font-weight: bold; /* Bold font for emphasis */
+  color: #333333; /* Dark color for readability */
+}
+
+.featured-history-card p {
+  font-size: 18px; /* Standard font size */
+  color: #666666; /* Softer gray for readability */
+}
+
+
+/* Footer style for consistent bottom placement */
+.app-footer {
+  position: fixed; /* Keeps the footer at the bottom of the screen */
+  bottom: 0; /* Absolute bottom position */
+  width: 100%; /* Full width for the footer */
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,68,121,0.7287289915966386) 35%, rgba(0,212,255,1) 100%);
+  text-align: center; /* Center-align the text */
+  padding: 15px; /* Adequate padding for the footer */
+  color: #333; /* Dark color for text readability */
+  font-size: 16px; /* Slightly larger font size */
+  font-family: 'Montserrat', sans-serif; /* Consistent font family */
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  z-index: 1000; /* High z-index to ensure it's on top */
+}
+
+/* Footer icon styling */
+.footer-icon {
+  font-size: 20px; /* Adjusted icon size */
+  margin-right: 10px; /* Space between the icon and the text */
+  vertical-align: middle; /* Align the icon with the text */
+}
+
+
+.history-card {
+  width: 350px;
+  height: auto;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+  animation: slideAndPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.history-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.history-icon {
+  font-size: 60px;
+  color: #007bff;
+  padding-bottom: 20px;
+}
+
+.history-content {
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
+  color: #333;
+}
+
+@keyframes slideAndPop {
+  0% {
+    transform: scale(0.8) translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
